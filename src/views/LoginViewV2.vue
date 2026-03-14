@@ -59,7 +59,7 @@ export default {
             console.log("called");
             console.log(this.email);
             console.log(this.password);
-            await axios.post("https://vysingsun-api.onrender.com/auth/login",{
+            await axios.post("https://shoe-shop-black.vercel.app/api/auth/login",{
                 email:this.email,
                 password:this.password,
             }).then(res => {
