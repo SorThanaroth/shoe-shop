@@ -63,7 +63,7 @@ export default {
   methods: {
     login(e) {
       e.preventDefault()
-      fetch("https://vysingsun-api.onrender.com/auth/login", {
+      fetch("https://shoe-shop-api-latest.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

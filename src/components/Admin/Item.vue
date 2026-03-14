@@ -120,7 +120,7 @@
         methods: {
             async addItem(e){
                 e.preventDefault();
-                let result = await axios.post("https://vysingsun-api.onrender.com/item/create",{
+                let result = await axios.post("https://shoe-shop-api-latest.onrender.com/item/create",{
                     name:this.name,
                     desc:this.desc,
                     category:this.category
@@ -131,7 +131,7 @@
             async DeleteItem(itemId){
                 if(confirm('Are you sure ?')){
                     console.log(itemId);
-                    await axios.post(`https://vysingsun-api.onrender.com/item/delete/${itemId}`)
+                    await axios.post(`https://shoe-shop-api-latest.onrender.com/item/delete/${itemId}`)
                         .then(res => {
                             console.log("deleted?");
                             this.items.pop(res.data.data)

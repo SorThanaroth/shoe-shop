@@ -1,6 +1,6 @@
 var productApi = {
     async getProductApi() {
-        const res = await fetch('https://vysingsun-api.onrender.com/product/all',{
+        const res = await fetch('https://shoe-shop-api-latest.onrender.com/product/all',{
             method: 'GET',
             // credentials: 'include',
             headers: {

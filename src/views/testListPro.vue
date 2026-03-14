@@ -97,7 +97,7 @@
         categories: [],
         product: Object,
         // anotherData: [],
-        serverUrl: 'https://vysingsun-api.onrender.com/static/',
+        serverUrl: 'https://shoe-shop-api-latest.onrender.com/static/',
         imageUrl: null,
         user:'',
         product1:'',
@@ -115,7 +115,7 @@
   },
   methods: {
     getProductByID(){
-      axios.get(`https://vysingsun-api.onrender.com/product/${this.$route.params.id}`)
+      axios.get(`https://shoe-shop-api-latest.onrender.com/product/${this.$route.params.id}`)
       .then(res =>{
         this.product = res.data[0];
         console.log(this.products);
@@ -130,7 +130,7 @@
         product: this.product._id
         
       });
-      let result = await axios.post("https://vysingsun-api.onrender.com/card/create", {
+      let result = await axios.post("https://shoe-shop-api-latest.onrender.com/card/create", {
         user:this.$store.getters.getUserId,
         color:this.color1,
         size:this.size1,

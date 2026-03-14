@@ -104,12 +104,12 @@ export default {
   data() {
     return {
       productFromApi: [],
-      serverUrl: 'https://vysingsun-api.onrender.com/static/'
+      serverUrl: 'https://shoe-shop-api-latest.onrender.com/static/'
     };
   },
   methods: {
     fetchData() {
-      axios.get('https://vysingsun-api.onrender.com/product/allProduct')
+      axios.get('https://shoe-shop-api-latest.onrender.com/product/allProduct')
         .then(response => {
           this.productFromApi = response.data;
           console.log(this.productFromApi);

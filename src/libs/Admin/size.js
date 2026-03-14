@@ -1,6 +1,6 @@
 var sizeApi = {
     async getSize() {
-        const res = await fetch('https://vysingsun-api.onrender.com/size/all',{
+        const res = await fetch('https://shoe-shop-api-latest.onrender.com/size/all',{
             method: 'GET',
             // credentials: 'include',
             headers: {

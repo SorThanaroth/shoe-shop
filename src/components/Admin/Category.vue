@@ -139,7 +139,7 @@
         methods: {
             async addCategory(e){
                 e.preventDefault();
-                let result = await axios.post("https://vysingsun-api.onrender.com/category/create",{
+                let result = await axios.post("https://shoe-shop-api-latest.onrender.com/category/create",{
                     name:this.name,
                     desc:this.desc,
                     imageUrl:this.imageUrl
@@ -151,7 +151,7 @@
             async DeleteCategory(categoryId){
                 if(confirm('Are you sure?')){
                     console.log(categoryId);
-                    await axios.post(`https://vysingsun-api.onrender.com/category/delete/${categoryId}`)
+                    await axios.post(`https://shoe-shop-api-latest.onrender.com/category/delete/${categoryId}`)
                     .then(res => {
                         console.log("deleted?");
                         this.categories.pop(res.data.data)

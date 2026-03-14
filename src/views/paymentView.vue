@@ -116,7 +116,7 @@ export default {
     methods: {
         async getAllOrderDetail(){
 
-            await axios.get(`https://vysingsun-api.onrender.com/orderDetail/${this.$store.getters.getOrderDetailId}`)
+            await axios.get(`https://shoe-shop-api-latest.onrender.com/orderDetail/${this.$store.getters.getOrderDetailId}`)
             .then(async(res) => {
                 this.orderDetails = await res.data.data;
                 console.log(this.orderDetails);
@@ -124,7 +124,7 @@ export default {
             })
         },
         async addPayment(){
-            await axios.post("https://vysingsun-api.onrender.com/payment/create",{
+            await axios.post("https://shoe-shop-api-latest.onrender.com/payment/create",{
                 userId:this.$store.getters.getUserId,
                 orderDetailId:this.$store.getters.getOrderDetailId,
                 card_number:this.card_number,

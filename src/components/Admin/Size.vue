@@ -113,7 +113,7 @@
         },
         methods: {
             async addSize(){
-                let result = await axios.post("https://vysingsun-api.onrender.com/size/create",{
+                let result = await axios.post("https://shoe-shop-api-latest.onrender.com/size/create",{
                     product:this.product,
                     size:this.size
                 }).then(res => {
@@ -124,7 +124,7 @@
             },
             deleteSize(sizeId){
                 if(confirm('Are you sure ?')){
-                    axios.post(`https://vysingsun-api.onrender.com/size/delete/${sizeId}`)
+                    axios.post(`https://shoe-shop-api-latest.onrender.com/size/delete/${sizeId}`)
                     .then(res => {
                         console.log("deleted?");
                         location.replace('/homeAdmin/size')

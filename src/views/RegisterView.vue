@@ -80,7 +80,7 @@ export default {
             console.log("hiii");
             console.log(this.repeat_password);
             if(this.password == this.repeat_password){
-                await axios.post("https://vysingsun-api.onrender.com/auth/register",{
+                await axios.post("https://shoe-shop-api-latest.onrender.com/auth/register",{
                     username:this.username,
                     firstName:this.firstName,
                     lastName:this.lastName,

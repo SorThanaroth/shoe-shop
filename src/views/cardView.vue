@@ -75,7 +75,7 @@ export default {
         return{
             array:[],
             cards:[],
-            serverUrl: 'https://vysingsun-api.onrender.com/static/',
+            serverUrl: 'https://shoe-shop-api-latest.onrender.com/static/',
 
             products:[],
            
@@ -86,7 +86,7 @@ export default {
     },
     methods: {
         async getAllCard(){
-            await axios.get("https://vysingsun-api.onrender.com/card/all")
+            await axios.get("https://shoe-shop-api-latest.onrender.com/card/all")
             .then(async(res) =>{
                 this.cards = await res.data.data;
                 console.log(this.cards);
@@ -96,7 +96,7 @@ export default {
             const promises = [];
 
             for (const element of this.cards) {
-                const promise = await axios.post("https://vysingsun-api.onrender.com/order/create", element)
+                const promise = await axios.post("https://shoe-shop-api-latest.onrender.com/order/create", element)
                     .then(response => {
                         // console.log('Data stored successfully!', response);
                         return response.data.data._id;
@@ -112,7 +112,7 @@ export default {
             localStorage.setItem("promises", JSON.stringify(promises));
         },
         removeProductFromCard(cardId){
-            axios.post(`https://vysingsun-api.onrender.com/card/delete/${cardId}`)
+            axios.post(`https://shoe-shop-api-latest.onrender.com/card/delete/${cardId}`)
             .then(res => {
                 this.getAllCard();
             })

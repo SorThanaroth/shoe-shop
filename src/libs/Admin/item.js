@@ -1,6 +1,6 @@
 var itemApi = {
     async getItemApi(category_id) {
-        const res = await fetch(`https://vysingsun-api.onrender.com/item/categoryid/${category_id}`,{
+        const res = await fetch(`https://shoe-shop-api-latest.onrender.com/item/categoryid/${category_id}`,{
             method: 'GET',
             // credentials: 'include',
             headers: {
@@ -11,7 +11,7 @@ var itemApi = {
         return result
     },
     async getAllItemApi(category_id) {
-        const res = await fetch('https://vysingsun-api.onrender.com/item/all',{
+        const res = await fetch('https://shoe-shop-api-latest.onrender.com/item/all',{
             method: 'GET',
             // credentials: 'include',
             headers: {

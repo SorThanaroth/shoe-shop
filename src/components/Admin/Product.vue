@@ -138,7 +138,7 @@
                 category: '',
                 item: '',
                 file: '',
-                serverUrl: 'https://vysingsun-api.onrender.com/static/',
+                serverUrl: 'https://shoe-shop-api-latest.onrender.com/static/',
                 imageUrl: null
             }
         },
@@ -165,7 +165,7 @@
                 formData.append("category", this.category1)
                 formData.append("item", this.item)
                 
-                await axios.post("https://vysingsun-api.onrender.com/product/create",formData,{
+                await axios.post("https://shoe-shop-api-latest.onrender.com/product/create",formData,{
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
@@ -180,7 +180,7 @@
             },
             async DeleteProduct(productId){
                 if(confirm('Are you sure ?')){
-                    await axios.post(`https://vysingsun-api.onrender.com/product/delete/${productId}`)
+                    await axios.post(`https://shoe-shop-api-latest.onrender.com/product/delete/${productId}`)
                     .then(res => {
                         this.products.pop(res.data.data)
                     }); 

@@ -240,7 +240,7 @@
                 showPopup: false,
                 users: [],
                 cards:[],
-                serverUrl: 'https://vysingsun-api.onrender.com/static/',
+                serverUrl: 'https://shoe-shop-api-latest.onrender.com/static/',
 
                 products:[],
             }
@@ -253,14 +253,14 @@
                 this.showPopup = !this.showPopup;
             },
             async getAllCard(){
-                await axios.get("https://vysingsun-api.onrender.com/card/all")
+                await axios.get("https://shoe-shop-api-latest.onrender.com/card/all")
                 .then(async(res) =>{
                     this.cards = await res.data.data;
                     console.log(this.cards);
                 })
             },
             removeProductFromCard(cardId){
-                axios.post(`https://vysingsun-api.onrender.com/card/delete/${cardId}`)
+                axios.post(`https://shoe-shop-api-latest.onrender.com/card/delete/${cardId}`)
                 .then(res => {
                     this.getAllCard();
                 })

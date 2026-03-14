@@ -115,7 +115,7 @@
         },
         methods: {
             async addPrice(){
-                let result = await axios.post("https://vysingsun-api.onrender.com/color/create",{
+                let result = await axios.post("https://shoe-shop-api-latest.onrender.com/color/create",{
                     product:this.product,
                     color:this.color
                 }).then(res => {
@@ -126,7 +126,7 @@
             },
             deleteColor(colorId){
                 if(confirm('Are you sure ?')){
-                    axios.post(`https://vysingsun-api.onrender.com/color/delete/${colorId}`)
+                    axios.post(`https://shoe-shop-api-latest.onrender.com/color/delete/${colorId}`)
                     .then(res => {
                         console.log("deleted?");
                         location.replace('/homeAdmin/color')

@@ -58,7 +58,7 @@ export default {
     return {
         categories: [],
         products: [],
-        serverUrl: 'https://vysingsun-api.onrender.com/static/',
+        serverUrl: 'https://shoe-shop-api-latest.onrender.com/static/',
         imageUrl: null
       
     }

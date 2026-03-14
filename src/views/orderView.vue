@@ -201,7 +201,7 @@ export default {
             }else{
                 this.company_shipping = 'ZTO'
             }
-            await axios.post("https://vysingsun-api.onrender.com/orderDetail/create",{
+            await axios.post("https://shoe-shop-api-latest.onrender.com/orderDetail/create",{
                 userId:this.$store.getters.getUserId,
                 username: this.username,
                 phone:this.phone,
@@ -228,7 +228,7 @@ export default {
         },
         
         async getAllCard(){
-            await axios.get("https://vysingsun-api.onrender.com/card/all")
+            await axios.get("https://shoe-shop-api-latest.onrender.com/card/all")
             .then(async(res) =>{
                 this.cards = await res.data.data;
                 console.log(this.cards);
@@ -236,7 +236,7 @@ export default {
         },
         storeDataFromCardToOrder(OrderDetailId) {
             for(const element of this.cards){
-                axios.post("https://vysingsun-api.onrender.com/order/create", {
+                axios.post("https://shoe-shop-api-latest.onrender.com/order/create", {
                     orderDetail:OrderDetailId,
                     product: element.product,
                     user: element.user,

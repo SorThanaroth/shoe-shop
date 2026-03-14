@@ -154,7 +154,7 @@ export default {
             orderDetails:'',
             cards:[],
             sub_total:this.$store.getters.getSubtotal,
-            serverUrl: 'https://vysingsun-api.onrender.com/static/',
+            serverUrl: 'https://shoe-shop-api-latest.onrender.com/static/',
         }
     },
     created(){
@@ -163,7 +163,7 @@ export default {
     },
     methods: {
         async getAllOrderDetail(){
-            await axios.get(`https://vysingsun-api.onrender.com/orderDetail/${this.$store.getters.getOrderDetailId}`)
+            await axios.get(`https://shoe-shop-api-latest.onrender.com/orderDetail/${this.$store.getters.getOrderDetailId}`)
             .then(async(res) => {
                 this.orderDetails = await res.data.data;
                 console.log(this.orderDetails);
@@ -172,7 +172,7 @@ export default {
             })
         },
         async getAllCard(){
-            await axios.get("https://vysingsun-api.onrender.com/card/all")
+            await axios.get("https://shoe-shop-api-latest.onrender.com/card/all")
             .then(async(res) =>{
                 this.cards = await res.data.data;
                 console.log(this.cards);
@@ -183,7 +183,7 @@ export default {
             console.log(this.$store.getters.getUserId);
             for(const element of this.cards){
                 if(element.user._id == this.$store.getters.getUserId){
-                    await axios.post(`https://vysingsun-api.onrender.com/card/delete/userid/${this.$store.getters.getUserId}`)
+                    await axios.post(`https://shoe-shop-api-latest.onrender.com/card/delete/userid/${this.$store.getters.getUserId}`)
                     .then(res =>{
                         console.log("Delete cards success!!");
                     })
